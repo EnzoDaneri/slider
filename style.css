@@ -1,0 +1,131 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 35px;
+}
+
+.slide .content h1{
+    margin-bottom: 10px;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.buttons button{
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+@media(max-width: 500px) {
+    .slide .content {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+
+}
+
+/* Background Images */
+
+.slide:first-child {
+ background: url('https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297_960_720.jpg')
+ no-repeat center center/cover ;
+}
+
+.slide:nth-child(2){
+    background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg')
+    no-repeat center top/cover ;
+   }
+
+   .slide:nth-child(3){
+    background:url('https://cdn.pixabay.com/photo/2015/11/12/18/02/away-1040726_960_720.jpg')
+    no-repeat center top/cover ;
+   }
+
+   .slide:nth-child(4){
+    background:url('https://cdn.pixabay.com/photo/2015/12/01/20/28/fall-1072821_960_720.jpg')
+    no-repeat center top/cover ;
+   }
+
+   .slide:nth-child(5){
+    background:url('https://cdn.pixabay.com/photo/2016/02/17/19/08/lotus-1205631_960_720.jpg')
+    no-repeat center top/cover ;
+   }
+
+   .slide:nth-child(6){
+    background:url('https://cdn.pixabay.com/photo/2017/12/17/19/08/away-3024773_960_720.jpg')
+    no-repeat center top/cover ;
+   }
+   
+
