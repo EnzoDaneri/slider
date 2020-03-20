@@ -34,9 +34,10 @@ const prevSlide = () => {
         current.previusElementSibling.classList.add('current');
     } else {
         //Add current to last
-        slides[slides.length -1].classList.add('current');
+    
+        slides[slides.length -6].classList.add('current');
     }
-    // setTimeout( () => current.classList.remove('current'));
+    // setTimeout( () => current.classList.remove('current'), 200);
 };
 
 //Button events
